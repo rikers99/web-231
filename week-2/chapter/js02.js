@@ -28,3 +28,17 @@ function setupForm() {
     document.getElementById("photoDist").value = 0;
 }
 
+// estimate the total cost of the service
+function getEstimate() {
+    let totalCost = 0;
+    let photographers = document.getElementById("photoNum").value;
+    let hours = document.getElementById("photoHrs").value;
+    let distance = document.getElementById("photoDist").value;
+
+    // add the cost of photographers for the hours covered
+    totalCost += photographers * hours * EMP_COST;
+
+    // Add the cost of distance per photographer per mile
+    totalCost += photographers * distance * TRAVEL_COST;
+}
+
