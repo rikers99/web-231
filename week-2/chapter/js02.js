@@ -26,6 +26,8 @@ function setupForm() {
     document.getElementById("makeBook").checked = false;
     document.getElementById("photoRights").checked = false;
     document.getElementById("photoDist").value = 0;
+
+    getEstimate();
 }
 
 // estimate the total cost of the service
@@ -48,6 +50,9 @@ function getEstimate() {
 
     //Add the cost of photo rights if purchased
     totalCost += buyRights ? REPRO_COST : 0;
+
+    //Display the total cost estimate
+    document.getElementById("estimate").innerHTML = "$ + totalCost;"
 }
 
 
