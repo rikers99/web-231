@@ -26,4 +26,7 @@ function verifyForm() {
       document.getElementById("Submit").innerHTML = "$" + "Please fill in all fields";
 
       getSubmit();
+
+      //add event handler for submit button
+      document.getElementById(SubmitEvent).onchange = getSubmit;
 }
