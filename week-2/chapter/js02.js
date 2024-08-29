@@ -29,14 +29,9 @@ function setupForm() {
     document.getElementById("photoNum").value = 1;
     document.getElementById("photoHrs").value = 2;
     document.getElementById("makeBook").checked = false;
-    Document.getElementById("photoRights").checked = false;
-    document.getElementById("photoDist").value = 0;
-}
-
-
     document.getElementById("photoRights").checked = false;
     document.getElementById("photoDist").value = 0;
-
+    
     getEstimate();
 
     //Add event handlers for each input controls
