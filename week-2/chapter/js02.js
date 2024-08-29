@@ -4,19 +4,17 @@
 
       Fan Trick Fine Art Photography
       Variables and functions
-<<<<<<< HEAD
+
       Author: 
       Date:   
-=======
+
       Author: Steve Culmer
       Date:   24 Aug 24
->>>>>>> b8c0fb72a17c84fe55a449ea6877d3816b4607cc
+
 
       Filename: js02.js
  */
 
-<<<<<<< HEAD
-=======
 // declare global constants for the application
 const EMP_COST = 100;    //cost of photographers per hour
 const BOOK_COST = 350;   //cost of memory book
@@ -26,18 +24,16 @@ const TRAVEL_COST = 2;   //cost of travel per mile
 //setup the form when the page loads 
 window.addEventListener("load", setupForm);
 
->>>>>>> b8c0fb72a17c84fe55a449ea6877d3816b4607cc
 // set the form's default values
 function setupForm() {
     document.getElementById("photoNum").value = 1;
     document.getElementById("photoHrs").value = 2;
     document.getElementById("makeBook").checked = false;
-<<<<<<< HEAD
     Document.getElementById("photoRights").checked = false;
     document.getElementById("photoDist").value = 0;
 }
 
-=======
+
     document.getElementById("photoRights").checked = false;
     document.getElementById("photoDist").value = 0;
 
@@ -80,4 +76,3 @@ function getEstimate() {
 
 
 
->>>>>>> b8c0fb72a17c84fe55a449ea6877d3816b4607cc
