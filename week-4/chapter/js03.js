@@ -16,7 +16,7 @@
      window.addEventListener("load", addWeekDays);
 
      //Function to write weekday names into the calender
-     function addWeekdays() {
+     function addWeekDays() {
         let i = 0; //initial counter value
 
         //reference the collection of heading cells
