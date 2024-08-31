@@ -10,7 +10,7 @@
 */
 
 //reference the collection of menu items
-let menuItem = "";
+let menuItem = document.getElementsByTagName("id");
 
      //Function to write menu items
      function menuItems() {
@@ -29,8 +29,10 @@ let menuItem = "";
         let billTotal = "calcTotal";
 
         //Function to total the bill as the menu item is clicked
-        function calcTotal() {
-            let i = 0 //initial counter value
+        function billTotal() {
+            let i = 0; //initial counter value
+
+            CalcTotal += [i](+1);
 
         }
 
