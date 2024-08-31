@@ -10,28 +10,31 @@
 */
 
 //reference the collection of menu items
-let menuItem = document.getElementsByTagName("id");
-
-
+let menuItem = "";
 
      //Function to write menu items
      function menuItems() {
+        window.addEventListener("load", menuItems);
         let i = 0; //initial counter value
         
-        window.addEventListener("load", menuItems);
-
         //write each of the menu items
         while (i < 5) {
             id[i].innerHTML = menuItems[i];
 
-            //increase the counter by 1
+            // increase the counter by 1
             i++;
         }
+
+        // Calculate the total cost of the customer order as the menu item is clicked
+        let billTotal = "calcTotal";
+
+        //Function to total the bill as the menu item is clicked
+        function calcTotal() {
+            let i = 0 //initial counter value
+
+        }
+
     }
-
-
-
-
 
  // Function to display a numeric value as a text string in the format $##.## 
  function formatCurrency(value) {
