@@ -60,7 +60,7 @@
             } else if (gameInnings[i] < 9) {
                 gameInfo += " {" + gameInnings[i]+"]";
             } else if  (gameInnings[i] > 9) {
-                gamweInfo += " [" + gameInnings[i] + "i";
+                gameInfo += " [" + gameInnings[i] + "i";
             }
 
             // Close the Paragraph
