@@ -4,8 +4,8 @@
 
       Tipton Turbines
       Baseball Schedule Data
-      Author: 
-      Date:   
+      Author: Steve Culmer
+      Date:   29 Aug 24
 
       Filename: schedule.js
 */
