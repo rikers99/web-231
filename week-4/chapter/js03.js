@@ -43,7 +43,7 @@ window.addEventListener("load", showGames);
 
 //Function to write game information into the calender
 function showGames() {
-  for (let i = 0; i < gamesDates.length; i++) {
+  for (let i = 0; i < gameDates.length; i++) {
     let gameInfo = "";
 
     // Open the Paragraph
@@ -89,7 +89,7 @@ function showGames() {
     gameInfo += "</p>";
 
     // Write the information into a table cell
-    let tableCell = document.getElementById(gamesDates[i]);
+    let tableCell = document.getElementById(gameDates[i]);
     tableCell.insertAdjacentHTML("beforeEnd", gameInfo);
   }
 }

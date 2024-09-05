@@ -10,35 +10,23 @@
 */
 
 //reference the collection of menu items
-let menuItem = document.getElementsByTagName("id");
+let menuItems = document.getElementsByClassName("menuItem");
 
-     //Function to write menu items
-     function menuItems() {
-        window.addEventListener("load", menuItems);
-        let i = 0; //initial counter value
-        
-        //write each of the menu items
-        while (i < 5) {
-            id[i].innerHTML = menuItems[i];
+// Loop through the menu items and add an EventListener for the change event, using the calcTotal() function
+for (let i = 0; i < menuItems.length; i++) {
+  menuItems[i].addEventListener("change", calcTotal);
+}
 
-            // increase the counter by 1
-            i++;
-        }
+// Function to calculate total cost of the order
+function calcTotal() {
+  let orderTotal = 0;
+  // 1. For loop over menuItems array
+  // 2. Add if statement to check the .checked property of each checkbox
+  // 2.a. Running total of the order.  Example, orderTotal += Number(menuItems[i].value);
+}
 
-        // Calculate the total cost of the customer order as the menu item is clicked
-        let billTotal = "calcTotal";
 
-        //Function to total the bill as the menu item is clicked
-        function billTotal() {
-            let i = 0; //initial counter value
-
-            CalcTotal += [i](+1);
-
-        }
-
-    }
-
- // Function to display a numeric value as a text string in the format $##.## 
+ // Function to display a numeric value as a text string in the format $##.##
  function formatCurrency(value) {
     return "$" + value.toFixed(2);
  }
