@@ -65,7 +65,7 @@ function showGames() {
     // Display the game location
     if (gameLocations[i] === "h") {
       gameInfo += "vs. ";
-    } else if (gameLocation[i] === "a") {
+    } else if (gameLocations[i] === "a") {
       gameInfo += "@ ";
     }
 
@@ -82,11 +82,11 @@ function showGames() {
     } else if (gameInnings[i] < 9) {
       gameInfo += " {" + gameInnings[i] + "]";
     } else if (gameInnings[i] > 9) {
-      gameInfo += " [" + gameInnings[i] + "i";
+      gameInfo += " [" + gameInnings[i] + "i]";
     }
 
     // Close the Paragraph
-    gameInfo += "</p";
+    gameInfo += "</p>";
 
     // Write the information into a table cell
     let tableCell = document.getElementById(gamesDates[i]);
