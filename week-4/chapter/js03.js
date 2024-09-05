@@ -10,77 +10,86 @@
      Filename: js03.js
  */
 
-     // Days of the week
-     let weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-     
-     window.addEventListener("load", addWeekDays);
+// Days of the week
+let weekDays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
-     //Function to write weekday names into the calender
-     function addWeekDays() {
-        let i = 0; //initial counter value
+window.addEventListener("load", addWeekDays);
 
-        //reference the collection of heading cells
-        let headingCells = document.getElementsByTagName("th");
+//Function to write weekday names into the calender
+function addWeekDays() {
+  let i = 0; //initial counter value
 
-        //write each of the seven days into a heading cell
-        while (i < 7) {
-            headingCells[1].innerHTML = weekDays[i];
+  //reference the collection of heading cells
+  let headingCells = document.getElementsByTagName("th");
 
-            //increase the counter by 1
-            i++;
-        }
+  //write each of the seven days into a heading cell
+  while (i < 7) {
+    headingCells[i].innerHTML = weekDays[i];
+
+    //increase the counter by 1
+    i++;
+  }
+}
+
+window.addEventListener("load", showGames);
+
+//Function to write game information into the calender
+function showGames() {
+  for (let i = 0; i < gamesDates.length; i++) {
+    let gameInfo = "";
+
+    // Open the Paragraph
+    switch (gameResults[i]) {
+      case "W":
+        gameInfo += "<p class='win'>";
+        break;
+      case "L":
+        gameInfo += "<p class='lose'>";
+        break;
+      case "S":
+        gameInfo += "<p class='suspended'>";
+        break;
+      case "P":
+        gameInfo += "<p class='postponed'>";
+        break;
     }
 
-    window.addEventListener("load", showGames);
-
-    //Function to write game information into the calender
-    function showGames() {
-        for (let i = 0; i < gamesDates.length; i++) {
-            let gameInfo = "";
-
-            // Open the Paragraph
-            switch (gameResults[i]) {
-                case "W":
-                    gameInfo += "<p class='win'>";
-                    break;
-                case "L":
-                    gameInfo += "<p class='lose'>";
-                    break;
-                case "S":
-                    gameInfo += "<p class='suspended'>";
-                    break;
-                case "P":
-                    gameInfo += "<p class='postponed'>";
-                    break;
-            }
-
-            // Display the game location
-            if (gameLocations[i] === "h") {
-                gameInfo += "vs. ";
-            } else if (gameLocation[i] +++ "a") {
-                gameInfo += "@ ";
-            }
-
-            // Include the Opponent
-            gameInfo += gameOpponents[i] + "<br>";
-
-            //Include the result and score
-            gameInfo += gameResults[i] + ": (" + runsScored[i] + "-" + runsAllowed[i] + ")";
-
-            // Display innings played for suspended, shortened, or extrainning games
-            if (gameInnings[i] < 5) {
-                gameInfo += " [" + gameInnings[i]+"]***";
-            } else if (gameInnings[i] < 9) {
-                gameInfo += " {" + gameInnings[i]+"]";
-            } else if  (gameInnings[i] > 9) {
-                gameInfo += " [" + gameInnings[i] + "i";
-            }
-
-            // Close the Paragraph
-            gameInfo += "</P";
-
-            // Write the information into a table cell
-            let tableCell = document.getElementById(gamesDates[i]);
-            tableCell.insertAdjacentHTML("beforeEnd", gameInfo);
-        }
+    // Display the game location
+    if (gameLocations[i] === "h") {
+      gameInfo += "vs. ";
+    } else if (gameLocation[i] === "a") {
+      gameInfo += "@ ";
     }
+
+    // Include the Opponent
+    gameInfo += gameOpponents[i] + "<br>";
+
+    //Include the result and score
+    gameInfo +=
+      gameResults[i] + ": (" + runsScored[i] + "-" + runsAllowed[i] + ")";
+
+    // Display innings played for suspended, shortened, or extrainning games
+    if (gameInnings[i] < 5) {
+      gameInfo += " [" + gameInnings[i] + "]***";
+    } else if (gameInnings[i] < 9) {
+      gameInfo += " {" + gameInnings[i] + "]";
+    } else if (gameInnings[i] > 9) {
+      gameInfo += " [" + gameInnings[i] + "i";
+    }
+
+    // Close the Paragraph
+    gameInfo += "</p";
+
+    // Write the information into a table cell
+    let tableCell = document.getElementById(gamesDates[i]);
+    tableCell.insertAdjacentHTML("beforeEnd", gameInfo);
+  }
+}
