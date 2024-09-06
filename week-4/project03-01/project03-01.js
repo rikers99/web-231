@@ -21,10 +21,18 @@ for (let i = 0; i < menuItems.length; i++) {
 function calcTotal() {
   let orderTotal = 0;
   // 1. For loop over menuItems array
+  for (let i = 0; i < menuItems.length; i++) {
+    calcTotal += menuItems[i];
+  }
   // 2. Add if statement to check the .checked property of each checkbox
+  var checkbox = document.getElementById("checkbox").Checked;
+  console.log(checkbox);
+  if(checkbox == 'true'){
+    console.log = "test";
+  }
   // 2.a. Running total of the order.  Example, orderTotal += Number(menuItems[i].value);
+  orderTotal += Number(menuItems[i].value);
 }
-
 
  // Function to display a numeric value as a text string in the format $##.##
  function formatCurrency(value) {
