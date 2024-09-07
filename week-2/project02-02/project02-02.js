@@ -11,15 +11,13 @@
  
 // declare global constants for the application
 function verifyForm() {
-      let name = document.getElementById("nameInput").value;
-      let email = document.getElementById("emailInput").value;
-      let phone = document.getElementById("phoneInput").value;
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let phone = document.getElementById("phone").value;
 
-      name  = (nameInput === "Name" && name === "");
-      email = (emailInput === "Email" && email === "");
-      phone = (phoneInput === "Phone" && phone === "");
-      document.getElementById("Submit").innerHTML = "$" + "Thank You!";
+      name && email && phone ? alert("Thank you") : alert("Please fill out all fields");
 
+<<<<<<< HEAD
       name = (nameInput === "" && name === "");
       email = (emailInput === "" && email === "");
       phone = (phoneInput === "" && phone === "");
@@ -30,3 +28,7 @@ function verifyForm() {
       //add event handler for submit button
       document.getElementById(SubmitEvent).onchange = getSubmit;
 }
+=======
+}
+document.getElementById("submit").addEventListener("click", verifyForm);
+>>>>>>> 4aafa8134cf866bbfbd6e1b8b91221e24b1a49da

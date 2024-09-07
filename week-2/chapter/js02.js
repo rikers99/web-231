@@ -4,8 +4,13 @@
 
       Fan Trick Fine Art Photography
       Variables and functions
+
+      Author: 
+      Date:   
+
       Author: Steve Culmer
       Date:   24 Aug 24
+
 
       Filename: js02.js
  */
@@ -26,7 +31,7 @@ function setupForm() {
     document.getElementById("makeBook").checked = false;
     document.getElementById("photoRights").checked = false;
     document.getElementById("photoDist").value = 0;
-
+    
     getEstimate();
 
     //Add event handlers for each input controls
