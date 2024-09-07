@@ -27,7 +27,7 @@ function calcTotal() {
   // 2. Add if statement to check the .checked property of each checkbox
   var checkbox = document.getElementById("checkbox").Checked;
   console.log(checkbox);
-  if(checkbox == 'true'){
+  if(checkbox == "true"){
     console.log = "test";
   }
   // 2.a. Running total of the order.  Example, orderTotal += Number(menuItems[i].value);
