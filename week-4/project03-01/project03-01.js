@@ -13,7 +13,7 @@
 let menuItems = document.getElementsByClassName("menuItem");
 
 // Loop through the menu items and add an EventListener for the change event, using the calcTotal() function
-for (let i = 0; i < menuItems.length++) {
+for (let i = 0; i < menuItems.length++); {
   menuItems[i].addEventListener("change", calcTotal);
 }
 
