@@ -13,7 +13,7 @@
 let menuItems = document.getElementsByClassName("menuItem");
 
 // Loop through the menu items and add an EventListener for the change event, using the calcTotal() function
-for (let i = 0; i < menuItems.length; i++) {
+for (let i = 0; i < menuItems.length++) {
   menuItems[i].addEventListener("change", calcTotal);
 }
 
@@ -23,13 +23,14 @@ function calcTotal() {
   // 1. For loop over menuItems array
   for (let i = 0; i < menuItems.length; i++) {
     calcTotal += menuItems[i];
+    var checkbox = document.getElementById("menuItems").Checked;
+    console.log(checkbox);
+    // 2. Add if statement to check the .checked property of each checkbox
+    if(menuItems[i] === "true"){
+      console.log('Found menuItems in the array.');
+    }
   }
-  // 2. Add if statement to check the .checked property of each checkbox
-  var checkbox = document.getElementById("checkbox").Checked;
-  console.log(checkbox);
-  if(checkbox == "true"){
-    console.log = "test";
-  }
+
   // 2.a. Running total of the order.  Example, orderTotal += Number(menuItems[i].value);
   orderTotal += Number(menuItems[i].value);
 }
