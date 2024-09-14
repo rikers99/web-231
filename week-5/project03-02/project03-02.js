@@ -25,4 +25,21 @@ captions[11]="The International Space Station second expansion [2006]";
 captions[12]="The International Space Station third expansion [2007]";
 captions[13]="The ISS over the Ionian Sea [2007]";
 
+// Declare the HTML code variable
+let i = document.getElementsByTagName("captions");
+let array = [0];
 
+//create a for loop for gallery array
+for (let i = 0; i < captions.length; i++) {
+  <figure>
+    <img alt='' src='slide1.jpg' />
+    <figcaption>caption[i]</figcaption>
+  </figure>
+
+  // 2. Add if statement to find the captions
+  if(captions[i] === "true"){
+    console.log('Found captions in the array.');
+  }
+
+  document.getElementById(id).innerHTML = "captions";
+}
