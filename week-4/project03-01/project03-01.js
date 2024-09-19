@@ -26,7 +26,7 @@ function calcTotal() {
     var checkbox = document.getElementById("menuItems").Checked;
     console.log(checkbox);
     // 2. Add if statement to check the .checked property of each checkbox
-    if(menuItems[i] === "true"){
+    if (menuItems.checked === "true") {
       console.log('Found menuItems in the array.');
     }
   }
