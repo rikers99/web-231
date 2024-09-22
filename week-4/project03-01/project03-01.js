@@ -10,32 +10,28 @@
 */
 
 //reference the collection of menu items
-let menuItems = document.getElementsByClassName("menuItem");
+let menuItems = document.getElementsByClassName("menuItem"); // Array of menu items from the HTML form
 
 // Loop through the menu items and add an EventListener for the change event, using the calcTotal() function
-for (let i = 0; i < menuItems.length++;) {
-  menuItems[i].addEventListener("change", calcTotal);
+for (let i = 0; i < menuItems.length; i++) {
+  menuItems[i].addEventListener("change", calcTotal); // Add event listener to each enu item
 }
 
 // Function to calculate total cost of the order
 function calcTotal() {
-  let orderTotal = 0;
-  // 1. For loop over menuItems array
+  let orderTotal = 0; // Variable to hold the order total
+
+  // Loop through the menu items and add the value of the checked menu items to the order total
   for (let i = 0; i < menuItems.length; i++) {
-    calcTotal += menuItems[i];
-    var checkbox = document.getElementById("menuItems").Checked;
-    console.log(checkbox);
-    // 2. Add if statement to check the .checked property of each checkbox
-    if (menuItems.checked === "true") {
-      console.log('Found menuItems in the array.');
+    if (menuItems[i].checked) {
+      orderTotal += Number(menuItems[i].value); // Add the value of the checked menu item to order total
     }
   }
 
-  // 2.a. Running total of the order.  Example, orderTotal += Number(menuItems[i].value);
-  orderTotal += Number(menuItems[i].value);
+  document.getElementById("billTotal").innerHTML = formatCurrency(orderTotal); // Display the order total
 }
 
- // Function to display a numeric value as a text string in the format $##.##
- function formatCurrency(value) {
-    return "$" + value.toFixed(2);
- }
+  // Function to display a numeric vale as a text string in the format $##.##
+  function formatCurrency(value) {
+    return  "$" + value.toFixed(2);
+  }
