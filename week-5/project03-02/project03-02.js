@@ -9,7 +9,7 @@
       Filename: project03-02.js
 */
 
-let captions = new Array(14);
+let captions = newArray(14);
 captions[0]="International Space Station fourth expansion [2009]";
 captions[1]="Assembling the International Space Station [1998]";
 captions[2]="The Atlantis docks with the ISS [2001]";
@@ -26,20 +26,21 @@ captions[12]="The International Space Station third expansion [2007]";
 captions[13]="The ISS over the Ionian Sea [2007]";
 
 // Declare the HTML code variable
-let i = document.getElementsByTagName("captions");
-let array = [0];
+let newArray = document.getElementsByTagName("captions");
+let captions = [0];
 
 //create a for loop for gallery array
 for (let i = 0; i < captions.length; i++) {
-  <figure>
-    <img alt='' src='slide1.jpg' />
-    <figcaption>caption[i]</figcaption>
-  </figure>
+  captions[i].addEventListener("change", "");
+}
 
-  // 2. Add if statement to find the captions
-  if(captions[i] === "true"){
-    console.log('Found captions in the array.');
+// Add if statement to find the captions
+function captions() {
+  let captions = 0;
+
+  for  (let i = 0; i < newArray.length; i++) {
+    if(captions[i].checked) {
+      captions += newArray[i].value;
+    }
   }
-
-  document.getElementById(id).innerHTML = "captions";
 }
