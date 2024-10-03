@@ -5,7 +5,7 @@
 
       Application to generate a slide show
       Author: Steve Culmer
-      Date:   26 sep 24
+      Date:   30 sep 24
 
       Filename: js05.js
 */

@@ -5,19 +5,19 @@
 
       Application to determine change from a cash amount
       Author: Steve Culmer
-      Date:   22 sep 24
+      Date:   30 sep 24
 
       Filename: project04-04.js
 */
 
 // Global variables
-let cashBox = document.getElementById(cash);
-let billBox = document.getElementById(bill);
-let changeBox = document.getElementById(change);
+let cashBox = document.getElementById("cash");
+let billBox = document.getElementById("bill");
+let changeBox = document.getElementById("change");
 
 // Event handlers to be run when the cash or bill value changes
-cashBox.addEventListener("change", runRegister);
-billBox.addEventListener("change", runRegister);
+cashBox.addEventListener("change", runTheRegister);
+billBox.addEventListener("change", runTheRegister);
 
 // Function to reset the values in the web page
 function zeroTheRegister() {
