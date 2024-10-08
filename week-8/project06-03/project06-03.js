@@ -12,5 +12,25 @@
 
 window.addEventListener("load", function() {
   let useShip = document.forms.useShip;
+  let billShip = document.forms.billShip;
 
+  //Add an event listener for every form element
+  for (let i=0; i < useShip.length; i++) {
+    useShip.elements[i].addEventListener("copy", billShip);
+  }
+
+  //copy the shipping information to the billing information
+  function copyShippingToBilling() {
+    // Determine the selected model
+    let firstname = useShip.firstnameShip;
+    let lastname = useShip.lastnameShip;
+    let address1 = useShip.address1Ship;
+    let address2 = useShip.address2Ship;
+    let city = useShip.cityShip;
+    let state = useShip.stateShip;
+    let country = useShip.countryShip;
+    let code = useShip.codeShip;
+
+
+  }
 });
