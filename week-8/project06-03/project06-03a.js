@@ -67,3 +67,27 @@ if (cityShip.validity.valueMissing) {
 } else {
   cityShip.setCustomValidity("");
 }
+
+//Check if the state is on the shipping address
+let stateShip = document.getElementById("stateShip");
+if (stateShip.validity.valueMissing) {
+  stateShip.setCustomValidity("Enter your state.");
+} else {
+  stateShip.setCustomValidity("");
+}
+
+// Check if the country is on the shipping address
+let countryShip = document.getElementById("countryShip");
+if (countryShip.validity.valueMissing) {
+  countryShip.setCustomValidity("Enter your country.");
+} else {
+  countryShip.setCustomValidity("");
+}
+
+// Check if the postal code is on the shipping address
+let codeShip = document.getElementById("codeShip");
+if (codeShip.validity.valueMissing) {
+  codeShip.setupCustomValidity("Enter your postal code.");
+} else {
+  codeShip.setCustomValidity("");
+}
