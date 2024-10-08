@@ -21,7 +21,7 @@ window.addEventListener("load", function() {
 
   //copy the shipping information to the billing information
   function copyShippingToBilling() {
-    // Determine the selected model
+    // Copy the shipping address to the bill address
     let firstname = useShip.firstnameShip;
     let lastname = useShip.lastnameShip;
     let address1 = useShip.address1Ship;
@@ -30,7 +30,5 @@ window.addEventListener("load", function() {
     let state = useShip.stateShip;
     let country = useShip.countryShip;
     let code = useShip.codeShip;
-
-
   }
 });
