@@ -32,6 +32,9 @@ document.getElementById("getFile").onchange = function() {
 
       // Store the text of the document, removing HTML tags
       let sourceText = sourceDoc.textContent;
+
+      // Generate the word cloud
+      wordCloud(sourceText);
     }
   }
 
@@ -39,7 +42,14 @@ document.getElementById("getFile").onchange = function() {
   catch(err) {
     window.alert(err);
   }
-}
+
+  function wordCloud(sourceText) {
+    // Convert the source text to lowercase
+    // and remove leading and trailing whitespace
+    sourceText = sourceText.toLowerCase();
+    sourceText = sourceText.trim();
+  }
+};
 
 
 
